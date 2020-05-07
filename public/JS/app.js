@@ -7,7 +7,7 @@ weatherform.addEventListener('submit',(e)=>{
     const search=searchLoc.value
     ermes.textContent='Loading...'
     message.textContent=''
-    fetch('http://localhost:3000/weather?address='+search).then((response)=>{
+    fetch('/weather?address='+search).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             ermes.textContent=data.error
